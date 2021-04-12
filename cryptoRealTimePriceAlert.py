@@ -7,6 +7,7 @@ import os
 import re
 import smtplib; import ssl
 from email.mime.text import MIMEText as MT; from email.mime.multipart import MIMEMultipart as MM
+from dotenv import load_dotenv
 
 
 class Alert:
@@ -139,8 +140,9 @@ def sendMail(ticker: str, price: int, email: str, high_low: bool, logger: loggin
     '''
     logger.info("sendMail(): Sending mail to {} using SMTP for {}.".format(email, ticker)) if logger else None
     
+    load_dotenv()
     senderEmail = os.getenv('SENDER_EMAIL')
-    senderPass = os.getenv('SENDER_PASS')
+    senderPass = os.getenv('SENDER_PASSWORD')
 
     logger.info("sendMail(): Creating message!") if logger else None
     msg = MM() # Create MIMEMultipart object

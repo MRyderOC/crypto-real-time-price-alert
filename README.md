@@ -10,6 +10,7 @@ Get cryptocurrencies price in real time. Also you can send an email alert if you
 - numpy
 - pandas
 - bs4 (BeautifulSoup)
+- python-dotenv
 - built-in libs:
   - requests
   - datetime
