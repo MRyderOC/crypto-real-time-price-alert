@@ -85,8 +85,8 @@ def dataCleaning(data: pd.DataFrame, logger: logging.getLogger = None) -> pd.Dat
 
 
 if __name__ == '__main__':
-    logger = createLogger('Crypte Real-Time Scrape')
-    logger.info('Prgram Starts!')
+    logger = createLogger('Crypto Real-Time Scrape')
+    logger.info('Program Starts!')
     
     # Defining DataFrame
     df = pd.DataFrame(columns=['Ticker', 'Price'])
